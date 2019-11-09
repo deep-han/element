@@ -10,6 +10,7 @@ install:
   - yarn --frozen-lockfile
 script:
   - yarn stdver
+  - yarn deploy:build
   - yarn dist
 cache: yarn
 deploy:
