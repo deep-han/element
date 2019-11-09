@@ -3,13 +3,14 @@ branches:
     - master
 language: node_js
 node_js:
-- lts/*
+  - lts/*
 git:
   depth: 3
 install:
-- yarn --frozen-lockfile
+  - yarn --frozen-lockfile
 script:
-- yarn dist
+  - yarn stdver
+  - yarn dist
 cache: yarn
 deploy:
   - provider: pages
