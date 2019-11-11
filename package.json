@@ -1,6 +1,6 @@
 {
-  "name": "@femessage/element-ui",
-  "version": "2.12.1",
+  "name": "@hangt/element-ui",
+  "version": "2.13.0",
   "description": "A Component Library for Vue.js.",
   "main": "lib/element-ui.common.js",
   "publishConfig": {
@@ -50,9 +50,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com:femessage/element.git"
+    "url": "git+https://github.com:deep-han/element.git"
   },
-  "homepage": "http://femessage.github.io/element/",
+  "homepage": "http://deep-han.github.io/element/",
   "keywords": [
     "eleme",
     "vue",
@@ -60,7 +60,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/femessage/element/issues"
+    "url": "https://github.com/deep-han/element/issues"
   },
   "unpkg": "lib/index.js",
   "style": "lib/theme-chalk/index.css",
