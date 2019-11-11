@@ -90,7 +90,7 @@ ComponentNames.forEach(name => {
 var template = render(MAIN_TEMPLATE, {
   include: includeComponentTemplate.join(endOfLine),
   install: installTemplate.join(',' + endOfLine),
-  version: process.env.VERSION || require('../../packages/theme-chalk/package.json').version,
+  version: process.env.VERSION || require('../../package.json').version,
   list: listTemplate.join(',' + endOfLine)
 });
 
