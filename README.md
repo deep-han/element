@@ -1,12 +1,3 @@
-# deepexi 自定义主题element
-element-ui版本为2.4.11
-## 二次开发
-
-```sh
-#安装 
-#如果是windows用户, 请先删除yarn.lock再安装，注意不要提交yarn.lock
-yarn
-
 <p align="center">
   <b>Special thanks to the generous sponsorship by:</b>
 </p>
@@ -32,15 +23,12 @@ yarn
   </tbody>
 </table>
 
-#构建网站
-yarn deploy:build
-
 ## Links
 - Homepage and documentation
-  - [International users](http://element.eleme.io/#/en-US)
+  - [International users](http://femessage.github.io/#/en-US)
   - [Chinese users](http://element-cn.eleme.io/#/zh-CN)
-  - [Spanish users](http://element.eleme.io/#/es)
-  - [French users](http://element.eleme.io/#/fr-FR)
+  - [Spanish users](http://femessage.github.io/#/es)
+  - [French users](http://femessage.github.io/#/fr-FR)
 - [awesome-element](https://github.com/ElementUI/awesome-element)
 - [FAQ](./FAQ.md)
 - [Customize theme](http://element.eleme.io/#/en-US/component/custom-theme)
@@ -59,13 +47,16 @@ yarn deploy:build
 
 ## Install
 ```shell
-npm install element-ui -S
+npm install @femessage/element-ui -S
+
+# or
+yarn add @femessage/element-ui
 ```
 
 ## Quick Start
 ``` javascript
 import Vue from 'vue'
-import Element from 'element-ui'
+import Element from '@femessage/element-ui'
 
 Vue.use(Element)
 
@@ -74,12 +65,12 @@ import {
   Select,
   Button
   // ...
-} from 'element-ui'
+} from '@femessage/element-ui'
 
 Vue.component(Select.name, Select)
 Vue.component(Button.name, Button)
 ```
-For more information, please refer to [Quick Start](http://element.eleme.io/#/en-US/component/quickstart) in our documentation.
+For more information, please refer to [Quick Start](http://femessage.github.io/#/en-US/component/quickstart) in our documentation.
 
 ## Browser Support
 Modern browsers and Internet Explorer 10+.
@@ -169,22 +160,11 @@ Support us with a monthly donation and help us continue our activities. [[Become
 <a href="https://opencollective.com/element/backer/28/website" target="_blank"><img src="https://opencollective.com/element/backer/28/avatar.svg"></a>
 <a href="https://opencollective.com/element/backer/29/website" target="_blank"><img src="https://opencollective.com/element/backer/29/avatar.svg"></a>
 
-
-## 部署
-
-### 网站
-在feature-theme-deepexi分支提交即会自动构建网站，并发布至github pages
-
-### 主题
-执行`publish-theme.sh`即可发布主题
-
 ## Join Discusion Group
 
 Scan the QR code using [Dingtalk App](https://www.dingtalk.com/) to join in discusion group :
 
 <img alt="Join Discusion Group" src="https://user-images.githubusercontent.com/17680888/60150281-95183f80-980a-11e9-88a8-d324c5e8d83b.png" width="300">
-
-[在nuxt框架中使用自定义主题](https://femessage.github.io/element/#/zh-CN/component/custom-theme)
 
 ## LICENSE
 [MIT](LICENSE)
