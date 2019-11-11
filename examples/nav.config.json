@@ -8,6 +8,10 @@
       "name": "开发指南",
       "children": [
         {
+          "path": "/installation",
+          "name": "安装"
+        },
+        {
           "path": "/quickstart",
           "name": "快速上手"
         },
