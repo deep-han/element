@@ -21,7 +21,7 @@ deploy:
     local-dir: examples/element-ui
     github-token: $GITHUB_TOKEN
   - provider: npm
-    email: levy9527@qq.com
+    email: xsytby1112@gmail.com
     api_key: $NPM_TOKEN
     skip-cleanup: true
 after_script:
