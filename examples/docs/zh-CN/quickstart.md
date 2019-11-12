@@ -2,7 +2,7 @@
 
 本节将介绍如何在项目中使用 Element。
 
-### 使用 vue-cli@3
+[使用nuxt + element 框架](https://github.com/levy9527/nuxt-element-dashboard)
 
 我们为新版的 vue-cli 准备了相应的 [Element 插件](https://github.com/ElementUI/vue-cli-plugin-element)，你可以用它们快速地搭建一个基于 Element 的项目。
 

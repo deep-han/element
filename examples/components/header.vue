@@ -118,11 +118,11 @@
           color: #888;
 
           &:hover {
-            color: #409EFF;
+            color: #5D81F9;
           }
           &.active {
              font-weight: bold;
-             color: #409EFF;
+             color: #5D81F9;
            }
         }
       }
@@ -182,7 +182,7 @@
 
     .is-active {
       span, i {
-        color: #409EFF;
+        color: #5D81F9;
       }
       i {
         transform: rotateZ(180deg) translateY(3px);
@@ -191,7 +191,7 @@
 
     &:hover {
       span, i {
-        color: #409EFF;
+        color: #5D81F9;
       }
     }
   }

@@ -1,4 +1,6 @@
-sudo: false
+branches:
+  only:
+    - feature-theme-deepexi
 language: node_js
 node_js: 10
 addons:
