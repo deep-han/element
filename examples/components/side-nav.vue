@@ -165,6 +165,8 @@
           </li>
         </ul>
         <template v-if="item.groups">
+          <!-- TODO: 增加一个 femessage 的 group 跳转到 serverless-console -->
+          <!-- TODO: 过滤掉不需要的 element 组件 -->
           <div
             class="nav-group"
             v-for="(group, key) in item.groups"
