@@ -165,8 +165,6 @@
           </li>
         </ul>
         <template v-if="item.groups">
-          <!-- TODO: 增加一个 femessage 的 group 跳转到 serverless-console -->
-          <!-- TODO: 过滤掉不需要的 element 组件 -->
           <div
             class="nav-group"
             v-for="(group, key) in item.groups"
@@ -187,6 +185,15 @@
               </li>
             </ul>
           </div>
+          <ul class="pure-menu-list">
+            <li
+              class="nav-item"
+              v-for="(navItem, key) in femessageNavs"
+              v-show="navItem.showOnElement"
+              :key="key">
+              <a :href="navItem.url" target="_blank">{{navItem.repoName | upperFirst}} {{navItem.title}}</a>
+            </li>
+          </ul>
         </template>
       </li>
     </ul>
@@ -210,7 +217,8 @@
         highlights: [],
         navState: [],
         isSmallScreen: false,
-        isFade: false
+        isFade: false,
+        femessageNavs: []
       };
     },
     watch: {
@@ -273,8 +281,36 @@
         if (!target.nextElementSibling || target.nextElementSibling.tagName !== 'UL') return;
         this.hideAllMenu();
         event.currentTarget.nextElementSibling.style.height = 'auto';
+      },
+
+      getFemessageNavs() {
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = _ => {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            const {data: navs} = JSON.parse(xhr.responseText);
+            navs.map(nav => {
+              nav.url = `https://serverless.deepexi.top/serverless-console/index.html#/material/${nav.repoName}`;
+              return nav;
+            });
+            this.femessageNavs = navs;
+            console.log(this.femessageNavs);
+          }
+        };
+        xhr.open(
+          'GET',
+          '//mockapi.eolinker.com/jttjNwp60fc1c9e944fdf1cc494b28a7ca4cfe66bbafee1/open'
+        );
+        xhr.send();
       }
     },
+
+    filters: {
+      upperFirst(value = '') {
+        const words = value.split('-');
+        return words.map(word => word.replace(word[0], word[0].toUpperCase())).join('');
+      }
+    },
+
     created() {
       bus.$on('fadeNav', () => {
         this.isFade = true;
@@ -282,6 +318,7 @@
     },
     mounted() {
       this.handleResize();
+      this.getFemessageNavs();
       window.addEventListener('resize', this.handleResize);
     },
     beforeDestroy() {
