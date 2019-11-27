@@ -24,6 +24,8 @@ Element UI 的成长离不开大家的支持，如果你愿意为 Element UI 贡
 
 - 于此同时，除了修改主题的 PR，其他改动请务必额外增加一个合并到 `only-component` 的 PR，保持 `only-component` 和 `master` 只有主题上的差异
 
+- [具体规范链接](https://www.yuque.com/docs/share/eeff5604-1163-47c1-b979-65373b1d9467)
+
 - **不要提交** `lib` 里面打包的文件。
 
 - 执行 `npm run dist` 后可以正确打包文件。
