@@ -189,7 +189,6 @@
             <li
               class="nav-item"
               v-for="(navItem, key) in femessageNavs"
-              v-show="navItem.showOnElement"
               :key="key">
               <a :href="navItem.url" target="_blank">{{navItem.repoName | upperFirst}} {{navItem.title}}</a>
             </li>
@@ -288,12 +287,10 @@
         xhr.onreadystatechange = _ => {
           if (xhr.readyState === 4 && xhr.status === 200) {
             const {data: navs} = JSON.parse(xhr.responseText);
-            navs.map(nav => {
+            this.femessageNavs = navs.map(nav => {
               nav.url = `https://serverless.deepexi.top/serverless-console/index.html#/material/${nav.repoName}`;
               return nav;
-            });
-            this.femessageNavs = navs;
-            console.log(this.femessageNavs);
+            }).filter(nav => nav.lib && nav.lib.indexOf('element') > -1);
           }
         };
         xhr.open(
