@@ -56,7 +56,7 @@ sh ./publish-theme.sh
 # now a new theme publish to npm for your own
 ```
 
-Why checkout from branch `only-component`, see [Contributing Guide](https://github.com/femessage/element/blob/master/.github/CONTRIBUTING.zh-CN.md)
+The reason to checkout from branch `only-component`, can be found in [Contributing Guide](https://github.com/femessage/element/blob/master/.github/CONTRIBUTING.zh-CN.md)
 
 ## Development
 ```sh
