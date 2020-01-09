@@ -207,11 +207,11 @@ export default {
     disabled: Boolean,
     clearable: {
       type: Boolean,
-      default: true,
+      default: true
     },
     filterable: {
       type: Boolean,
-      default: true,
+      default: true
     },
     filterMethod: Function,
     separator: {

@@ -272,11 +272,11 @@
       disabled: Boolean,
       clearable: {
         type: Boolean,
-        default: true,
+        default: true
       },
       filterable: {
         type: Boolean,
-        default: true,
+        default: true
       },
       allowCreate: Boolean,
       loading: Boolean,
